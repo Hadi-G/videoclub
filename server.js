@@ -1,7 +1,7 @@
 var express  = require('express');
 var session = require("express-session");
 var bodyParser = require('body-parser');
-var stripe = require("stripe")("sk_test_QEiMUFAE77gU62prifdo6SlO");
+var stripe = require("stripe")("##############PUT YOUR OWNE KEY##############");
 
 
 var app = express();
