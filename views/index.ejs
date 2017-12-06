@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+
+<h1>NETFLIX</h1>
+
+<!-- <span id='container'>0</span>
+<button id='btn'>Cliquez sur moi :)</button><br /><br /> -->
+
+<form action='/'>
+  Movie title:<br>
+  <input type="text" name="movieTitle" placeholder="titre du film"><br>
+  Kind of Movie:<br>
+  <input type="text" name="movieKind" placeholder="action, drame, comedie ...">
+  <input type="submit" value="Submit">
+</form>
+<br /><br />
+
+<button><a href='/moviePage'>movie page</a></button>
+<br /><br />
+
+<h2>Film disponible a la vente</h2><br />
+
+<ul>
+  <%
+for(var i=0; i<movie.length; i++){
+  %>
+      <li>Film : <%=movie[i].title%> // Genre : <%=movie[i].kind%> // Prix :<%=movie[i].prix%> </li>
+      <form action='/'>
+      <input type='hidden' name="title" value='<%=movie[i].title%>'></input>
+      <input type='hidden' name="kind" value='<%=movie[i].kind%>'></input>
+      <input type='hidden' name="prix" value='<%=movie[i].prix%>'></input>
+      <input type='submit' value='acheter'></input>
+      </form>
+  <%
+}
+  %>
+</ul>
+<br />
+
+<button><a href='/achats'>mes achats</a></button>
+
+
+
+<script src='script.js'></script>
+
+</body>
+</html>

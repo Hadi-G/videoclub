@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+
+<h1>Mes achats</h1>
+<br /><br />
+
+<ul>
+<%
+for(var i=0; i<panier.length; i++){
+%>
+    <li><%=panier[i].title%> // <%=panier[i].kind%> // <%=panier[i].prix%></li><button><a href="/stripe">finaliser l'achat</a></button>
+<%
+}
+%>
+</ul>
+
+<button><a href='/'>Retour acceuil</a></button>
+
+
+</body>
+</html>
